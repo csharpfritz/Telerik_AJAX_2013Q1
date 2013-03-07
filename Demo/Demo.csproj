@@ -148,23 +148,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1_DropDownList\practice.aspx" />
-    <Content Include="1_DropDownList\test1.aspx" />
-    <Content Include="1_DropDownList\test2.aspx" />
-    <Content Include="1_DropDownList\test3.aspx" />
-    <Content Include="1_DropDownList\webinar.aspx" />
     <Content Include="2_DropDownTree\default.aspx" />
     <Content Include="3_SearchBox\default.aspx" />
-    <Content Include="3_SearchBox\practice.aspx" />
-    <Content Include="3_SearchBox\test1.aspx" />
-    <Content Include="3_SearchBox\test2.aspx" />
-    <Content Include="3_SearchBox\test3.aspx" />
-    <Content Include="3_SearchBox\webinar.aspx" />
     <Content Include="4_PivotGrid\default.aspx" />
-    <Content Include="4_PivotGrid\practice.aspx" />
-    <Content Include="4_PivotGrid\test1.aspx" />
-    <Content Include="4_PivotGrid\test2.aspx" />
-    <Content Include="4_PivotGrid\webinar.aspx" />
     <Content Include="5_ZipLibrary\default.aspx" />
     <Content Include="7_NewFeatures\BarCode.aspx" />
     <Content Include="7_NewFeatures\barcode_only.aspx" />
@@ -309,41 +295,6 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1_DropDownList\practice.aspx.cs">
-      <DependentUpon>practice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="1_DropDownList\practice.aspx.designer.cs">
-      <DependentUpon>practice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="1_DropDownList\test1.aspx.cs">
-      <DependentUpon>test1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="1_DropDownList\test1.aspx.designer.cs">
-      <DependentUpon>test1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="1_DropDownList\test2.aspx.cs">
-      <DependentUpon>test2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="1_DropDownList\test2.aspx.designer.cs">
-      <DependentUpon>test2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="1_DropDownList\test3.aspx.cs">
-      <DependentUpon>test3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="1_DropDownList\test3.aspx.designer.cs">
-      <DependentUpon>test3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="1_DropDownList\webinar.aspx.cs">
-      <DependentUpon>webinar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="1_DropDownList\webinar.aspx.designer.cs">
-      <DependentUpon>webinar.aspx</DependentUpon>
-    </Compile>
     <Compile Include="2_DropDownTree\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -358,75 +309,12 @@
     <Compile Include="3_SearchBox\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="3_SearchBox\practice.aspx.cs">
-      <DependentUpon>practice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="3_SearchBox\practice.aspx.designer.cs">
-      <DependentUpon>practice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="3_SearchBox\test1.aspx.cs">
-      <DependentUpon>test1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="3_SearchBox\test1.aspx.designer.cs">
-      <DependentUpon>test1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="3_SearchBox\test2.aspx.cs">
-      <DependentUpon>test2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="3_SearchBox\test2.aspx.designer.cs">
-      <DependentUpon>test2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="3_SearchBox\test3.aspx.cs">
-      <DependentUpon>test3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="3_SearchBox\test3.aspx.designer.cs">
-      <DependentUpon>test3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="3_SearchBox\webinar.aspx.cs">
-      <DependentUpon>webinar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="3_SearchBox\webinar.aspx.designer.cs">
-      <DependentUpon>webinar.aspx</DependentUpon>
-    </Compile>
     <Compile Include="4_PivotGrid\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="4_PivotGrid\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="4_PivotGrid\practice.aspx.cs">
-      <DependentUpon>practice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="4_PivotGrid\practice.aspx.designer.cs">
-      <DependentUpon>practice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="4_PivotGrid\test1.aspx.cs">
-      <DependentUpon>test1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="4_PivotGrid\test1.aspx.designer.cs">
-      <DependentUpon>test1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="4_PivotGrid\test2.aspx.cs">
-      <DependentUpon>test2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="4_PivotGrid\test2.aspx.designer.cs">
-      <DependentUpon>test2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="4_PivotGrid\webinar.aspx.cs">
-      <DependentUpon>webinar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="4_PivotGrid\webinar.aspx.designer.cs">
-      <DependentUpon>webinar.aspx</DependentUpon>
     </Compile>
     <Compile Include="5_ZipLibrary\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
@@ -543,7 +431,6 @@
     <Compile Include="1_DropDownList\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Api\gamesModelRepositories.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -564,8 +451,6 @@
     <Compile Include="Models\Product.generated.cs">
       <DependentUpon>EntitiesModel1.rlinq</DependentUpon>
     </Compile>
-    <Compile Include="Api\OpenAccessBaseApiController.cs" />
-    <Compile Include="Api\OpenAccessBaseRepository.cs" />
     <Compile Include="6_Persistence\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -573,7 +458,6 @@
     <Compile Include="6_Persistence\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Api\ProductsController.cs" />
     <Compile Include="7_NewFeatures\ImageEditor.aspx.cs">
       <DependentUpon>ImageEditor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -648,7 +532,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
