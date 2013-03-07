@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="gamesModel" namespace="Demo" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="gamesModel" backend="mssql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="Demo" default="true">
+      <orm:class name="Product" uniqueId="3db17982-d4f5-4e31-8ae7-a12e59b60743">
+        <orm:table name="Products" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_iD" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_iD" property="ID" behavior="readwrite" uniqueId="0ceb694e-1225-4b9e-9bd8-d5e969461850" type="System.Int32">
+          <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_name" property="Name" behavior="readwrite" uniqueId="b31345e4-ca36-4f84-a4a2-9f4f37eb026f" type="System.String">
+          <orm:column name="Name" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_description" property="Description" behavior="readwrite" uniqueId="72d5b661-5c06-41a5-881b-fcfcc3689755" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="false" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_priceUSD" property="PriceUSD" behavior="readwrite" uniqueId="0f9dab1c-3300-46b9-b444-75e5ad656877" type="System.Decimal">
+          <orm:column name="PriceUSD" sql-type="decimal" nullable="false" length="8" scale="2" ado-type="Decimal" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="Branch" uniqueId="66011ca6-ac04-45fa-b1ca-aba97d4354cb">
+        <orm:table name="Branch" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_iD" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_iD" property="ID" behavior="readwrite" uniqueId="7898033d-3582-4f36-93d1-7bb3f5f96c98" type="System.Int32">
+          <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_parentID" property="ParentID" behavior="readwrite" uniqueId="5f1813d3-70f2-48f2-a414-b5068b334aef" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ParentID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_name" property="Name" behavior="readwrite" uniqueId="255be023-b82e-4db0-9a29-ffa063d81065" type="System.String">
+          <orm:column name="Name" sql-type="nvarchar" nullable="false" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="Products">
+        <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="Name" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="false" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PriceUSD" sql-type="decimal" nullable="false" length="8" scale="2" ado-type="Decimal" />
+      </orm:table>
+      <orm:table name="Branch">
+        <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="ParentID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Name" sql-type="nvarchar" nullable="false" length="100" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+      <orm:table name="Donuts">
+        <orm:column name="Name" sql-type="varchar" nullable="false" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="Num" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Color" sql-type="varchar" nullable="false" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+      <orm:source-strategy>Property</orm:source-strategy>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>GamesConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>data source=.\SQLEXPRESS;initial catalog=games;integrated security=True</AppConfigConnectionString>
+    <InitialCatalog>games</InitialCatalog>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MsSql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="3db17982-d4f5-4e31-8ae7-a12e59b60743" name="Product" namespace="Demo" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="0ceb694e-1225-4b9e-9bd8-d5e969461850" name="ID" type="Int32" label="ID : Int32" kind="Persistent" identity="true" fieldName="_iD" />
+      <Property Id="72d5b661-5c06-41a5-881b-fcfcc3689755" name="Description" label="Description : String" kind="Persistent" fieldName="_description" />
+      <Property Id="b31345e4-ca36-4f84-a4a2-9f4f37eb026f" name="Name" label="Name : String" kind="Persistent" fieldName="_name" />
+      <Property Id="0f9dab1c-3300-46b9-b444-75e5ad656877" name="PriceUSD" type="Decimal" label="PriceUSD : Decimal" kind="Persistent" fieldName="_priceUSD" />
+    </DomainClass>
+    <DomainClass Id="66011ca6-ac04-45fa-b1ca-aba97d4354cb" name="Branch" namespace="Demo" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="7898033d-3582-4f36-93d1-7bb3f5f96c98" name="ID" type="Int32" label="ID : Int32" kind="Persistent" identity="true" fieldName="_iD" />
+      <Property Id="255be023-b82e-4db0-9a29-ffa063d81065" name="Name" label="Name : String" kind="Persistent" fieldName="_name" />
+      <Property Id="5f1813d3-70f2-48f2-a414-b5068b334aef" name="ParentID" type="Int32" label="ParentID : Int32" nullable="true" kind="Persistent" fieldName="_parentID" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="5d91ac83-037d-4685-b245-e9ec5b244e5f">
+      <domainContainer name="gamesModel" namespace="Demo" showPropertiesCompartment="true">
+        <entitySetProperty name="Products" namespace="Demo" type="Product" label="Products : IQueryable&lt;Demo.Product&gt;" />
+        <entitySetProperty name="Branches" namespace="Demo" type="Branch" label="Branches : IQueryable&lt;Demo.Branch&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

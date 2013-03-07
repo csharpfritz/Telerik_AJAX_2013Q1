@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="AdventureWorks" namespace="Demo" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="AdventureWorks" backend="mssql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="Demo" default="true">
+      <orm:class name="SalesDetail" uniqueId="187891f7-2693-408a-9b3c-2c5a69e861ce">
+        <orm:table name="SalesDetails" view="true" />
+        <orm:identity>
+          <orm:single-field field-name="_salesOrderDetailID" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_orderQty" property="OrderQty" behavior="readwrite" uniqueId="49b9da1c-3f71-4adc-ab2a-1773c6c912d8" type="System.Int16">
+          <orm:column name="OrderQty" sql-type="smallint" nullable="false" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_salesPerson" property="SalesPerson" behavior="readwrite" uniqueId="768c2a5d-5e6a-4ed7-8518-5988b668463d" type="System.String">
+          <orm:column name="SalesPerson" sql-type="nvarchar" nullable="false" length="101" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_specialOfferID" property="SpecialOfferID" behavior="readwrite" uniqueId="e80de97f-e5b8-4aaf-b350-21f22e240ea9" type="System.Int32">
+          <orm:column name="SpecialOfferID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_unitPrice" property="UnitPrice" behavior="readwrite" uniqueId="158c5f11-e9fb-449b-b987-6cd4f719e7e3" type="System.Decimal">
+          <orm:column name="UnitPrice" sql-type="money" nullable="false" length="0" scale="0" ado-type="Currency" />
+        </orm:field>
+        <orm:field name="_lineTotal" property="LineTotal" behavior="readwrite" uniqueId="32d177f8-74fc-4a64-bc4f-d58820393bc9" type="System.Decimal">
+          <orm:column name="LineTotal" sql-type="numeric" nullable="false" length="38" scale="6" ado-type="Numeric" />
+        </orm:field>
+        <orm:field name="_salesTerritory" property="SalesTerritory" behavior="readwrite" uniqueId="28f19d21-7d60-4b7e-a8fe-ce1ab33330c3" type="System.String">
+          <orm:column name="SalesTerritory" sql-type="'Name'" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" is-udt="true" />
+        </orm:field>
+        <orm:field name="_salesCountry" property="SalesCountry" behavior="readwrite" uniqueId="7f151c13-e7d2-4e91-8461-fbde90104441" type="System.String">
+          <orm:column name="SalesCountry" sql-type="nvarchar" nullable="false" length="3" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_salesGroup" property="SalesGroup" behavior="readwrite" uniqueId="594d75ac-dd02-4f54-9eb8-0b91f1474c15" type="System.String">
+          <orm:column name="SalesGroup" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_salesOrderDetailID" property="SalesOrderDetailID" behavior="readwrite" uniqueId="a04ed3e2-967f-417e-8421-2622d83654cc" type="System.Int32">
+          <orm:column name="SalesOrderDetailID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_product" property="Product" behavior="readwrite" uniqueId="eec98111-01c7-47a0-904c-846060d6ffab" type="System.String">
+          <orm:column name="Product" sql-type="'Name'" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" is-udt="true" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="SalesSummary" uniqueId="d64a1f23-2302-4029-8194-668c569f581f">
+        <orm:table name="SalesSummary" view="true" />
+        <orm:identity>
+          <orm:single-field field-name="_salesOrderID" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_subTotal" property="SubTotal" behavior="readwrite" uniqueId="c6fecff4-fa64-477a-b422-1f3938c70a19" type="System.Decimal">
+          <orm:column name="SubTotal" sql-type="money" nullable="false" length="0" scale="0" ado-type="Currency" />
+        </orm:field>
+        <orm:field name="_salesTerritory" property="SalesTerritory" behavior="readwrite" uniqueId="263da0a6-79d6-4dbc-aec8-0e16873e832b" type="System.String">
+          <orm:column name="SalesTerritory" sql-type="'Name'" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" is-udt="true" />
+        </orm:field>
+        <orm:field name="_salesPerson" property="SalesPerson" behavior="readwrite" uniqueId="faaaf55e-373d-424e-8439-bffbbe220ffa" type="System.String">
+          <orm:column name="SalesPerson" sql-type="nvarchar" nullable="false" length="101" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_salesOrderID" property="SalesOrderID" behavior="readwrite" uniqueId="ca1b952e-c7c8-45f2-bd4a-99df51e710d4" type="System.Int32">
+          <orm:column name="SalesOrderID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_salesGroup" property="SalesGroup" behavior="readwrite" uniqueId="9a29214e-02b5-4420-a8b2-21590c27bcb6" type="System.String">
+          <orm:column name="SalesGroup" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_salesCountry" property="SalesCountry" behavior="readwrite" uniqueId="f7536e6d-ab71-433d-87b2-db4c0d02a9e9" type="System.String">
+          <orm:column name="SalesCountry" sql-type="nvarchar" nullable="false" length="3" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_orderDate" property="OrderDate" behavior="readwrite" uniqueId="91da6461-dccf-49d9-b77c-6c7eb41f695a" type="System.DateTime">
+          <orm:column name="OrderDate" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_totalQty" property="TotalQty" behavior="readwrite" uniqueId="e1d491c3-5721-427e-8d54-f7ac71f70c4b" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="TotalQty" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_territoryID" property="TerritoryID" behavior="readwrite" uniqueId="202a9b95-c8b1-411b-a0bb-f856d7069b43" type="System.Int32">
+          <orm:column nullable="false" length="0" name="TerritoryID" scale="0" sql-type="int" ado-type="Int32" />
+        </orm:field>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:udt name="AccountNumber" sql-type="nvarchar" length="15" scale="0" />
+      <orm:udt name="Flag" sql-type="bit" scale="0" />
+      <orm:udt name="Name" sql-type="nvarchar" length="50" scale="0" />
+      <orm:udt name="NameStyle" sql-type="bit" scale="0" />
+      <orm:udt name="OrderNumber" sql-type="nvarchar" length="25" scale="0" />
+      <orm:udt name="Phone" sql-type="nvarchar" length="25" scale="0" />
+      <orm:table name="SalesDetails" view="true">
+        <orm:column name="OrderQty" sql-type="smallint" nullable="false" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="SalesPerson" sql-type="nvarchar" nullable="false" length="101" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SpecialOfferID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="UnitPrice" sql-type="money" nullable="false" length="0" scale="0" ado-type="Currency" />
+        <orm:column name="LineTotal" sql-type="numeric" nullable="false" length="38" scale="6" ado-type="Numeric" />
+        <orm:column name="SalesTerritory" sql-type="'Name'" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" is-udt="true" />
+        <orm:column name="SalesCountry" sql-type="nvarchar" nullable="false" length="3" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SalesGroup" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SalesOrderDetailID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="Product" sql-type="'Name'" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" is-udt="true" />
+      </orm:table>
+      <orm:table name="SalesSummary" view="true">
+        <orm:column name="SubTotal" sql-type="money" nullable="false" length="0" scale="0" ado-type="Currency" />
+        <orm:column name="SalesTerritory" sql-type="'Name'" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" is-udt="true" />
+        <orm:column name="SalesPerson" sql-type="nvarchar" nullable="false" length="101" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SalesOrderID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="SalesGroup" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SalesCountry" sql-type="nvarchar" nullable="false" length="3" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderDate" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="TotalQty" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column nullable="false" length="0" name="TerritoryID" scale="0" sql-type="int" ado-type="Int32" />
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+      <orm:source-strategy>Property</orm:source-strategy>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>AdventureWorks2012Connection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>data source=.\SQLEXPRESS;initial catalog=AdventureWorks2012;integrated security=True</AppConfigConnectionString>
+    <InitialCatalog>AdventureWorks2012</InitialCatalog>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MsSql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="187891f7-2693-408a-9b3c-2c5a69e861ce" name="SalesDetail" namespace="Demo" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="32d177f8-74fc-4a64-bc4f-d58820393bc9" name="LineTotal" type="Decimal" label="LineTotal : Decimal" kind="Persistent" fieldName="_lineTotal" />
+      <Property Id="49b9da1c-3f71-4adc-ab2a-1773c6c912d8" name="OrderQty" type="Int16" label="OrderQty : Int16" kind="Persistent" fieldName="_orderQty" />
+      <Property Id="7f151c13-e7d2-4e91-8461-fbde90104441" name="SalesCountry" label="SalesCountry : String" kind="Persistent" fieldName="_salesCountry" />
+      <Property Id="594d75ac-dd02-4f54-9eb8-0b91f1474c15" name="SalesGroup" label="SalesGroup : String" kind="Persistent" fieldName="_salesGroup" />
+      <Property Id="768c2a5d-5e6a-4ed7-8518-5988b668463d" name="SalesPerson" label="SalesPerson : String" kind="Persistent" fieldName="_salesPerson" />
+      <Property Id="28f19d21-7d60-4b7e-a8fe-ce1ab33330c3" name="SalesTerritory" label="SalesTerritory : String" kind="Persistent" fieldName="_salesTerritory" />
+      <Property Id="e80de97f-e5b8-4aaf-b350-21f22e240ea9" name="SpecialOfferID" type="Int32" label="SpecialOfferID : Int32" kind="Persistent" fieldName="_specialOfferID" />
+      <Property Id="158c5f11-e9fb-449b-b987-6cd4f719e7e3" name="UnitPrice" type="Decimal" label="UnitPrice : Decimal" kind="Persistent" fieldName="_unitPrice" />
+      <Property Id="a04ed3e2-967f-417e-8421-2622d83654cc" name="SalesOrderDetailID" type="Int32" label="SalesOrderDetailID : Int32" kind="Persistent" identity="true" fieldName="_salesOrderDetailID" />
+      <Property Id="eec98111-01c7-47a0-904c-846060d6ffab" name="Product" label="Product : String" kind="Persistent" fieldName="_product" />
+    </DomainClass>
+    <DomainClass Id="d64a1f23-2302-4029-8194-668c569f581f" name="SalesSummary" namespace="Demo" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="91da6461-dccf-49d9-b77c-6c7eb41f695a" name="OrderDate" type="DateTime" label="OrderDate : DateTime" kind="Persistent" fieldName="_orderDate" />
+      <Property Id="f7536e6d-ab71-433d-87b2-db4c0d02a9e9" name="SalesCountry" label="SalesCountry : String" kind="Persistent" fieldName="_salesCountry" />
+      <Property Id="9a29214e-02b5-4420-a8b2-21590c27bcb6" name="SalesGroup" label="SalesGroup : String" kind="Persistent" fieldName="_salesGroup" />
+      <Property Id="ca1b952e-c7c8-45f2-bd4a-99df51e710d4" name="SalesOrderID" type="Int32" label="SalesOrderID : Int32" kind="Persistent" identity="true" fieldName="_salesOrderID" />
+      <Property Id="faaaf55e-373d-424e-8439-bffbbe220ffa" name="SalesPerson" label="SalesPerson : String" kind="Persistent" fieldName="_salesPerson" />
+      <Property Id="263da0a6-79d6-4dbc-aec8-0e16873e832b" name="SalesTerritory" label="SalesTerritory : String" kind="Persistent" fieldName="_salesTerritory" />
+      <Property Id="c6fecff4-fa64-477a-b422-1f3938c70a19" name="SubTotal" type="Decimal" label="SubTotal : Decimal" kind="Persistent" fieldName="_subTotal" />
+      <Property Id="e1d491c3-5721-427e-8d54-f7ac71f70c4b" name="TotalQty" type="Int32" label="TotalQty : Int32" nullable="true" kind="Persistent" fieldName="_totalQty" />
+      <Property Id="202a9b95-c8b1-411b-a0bb-f856d7069b43" name="TerritoryID" type="Int32" label="TerritoryID : Int32" kind="Persistent" fieldName="_territoryID" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="d051550a-5fa9-4f34-bc43-15bea1e5394c">
+      <domainContainer name="AdventureWorks" namespace="Demo" showPropertiesCompartment="true">
+        <entitySetProperty name="SalesDetails" namespace="Demo" type="SalesDetail" label="SalesDetails : IQueryable&lt;Demo.SalesDetail&gt;" />
+        <entitySetProperty name="SalesSummaries" namespace="Demo" type="SalesSummary" label="SalesSummaries : IQueryable&lt;Demo.SalesSummary&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

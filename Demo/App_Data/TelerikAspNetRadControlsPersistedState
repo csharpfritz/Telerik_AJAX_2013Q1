@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ArrayOfRadControlState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RadControlState>
+    <ControlSettings>
+      <ControlSetting>
+        <Name>SelectedValues</Name>
+        <Value Type="System.DateTime[]">
+          <ArrayOfDateTime>
+            <dateTime>2013-02-28T00:00:00</dateTime>
+            <dateTime>2013-01-09T00:00:00</dateTime>
+            <dateTime>2013-01-10T00:00:00</dateTime>
+            <dateTime>2013-01-11T00:00:00</dateTime>
+          </ArrayOfDateTime>
+        </Value>
+      </ControlSetting>
+    </ControlSettings>
+    <UniqueId>Telerik.Web.UI_PersistanceManager_CustomSettings</UniqueId>
+  </RadControlState>
+</ArrayOfRadControlState>
